@@ -1,7 +1,5 @@
 import React from 'react'
 import { BackgroundGradientAnimation } from './ui/background-gradient-animation'
-// import { BackgroundGradient } from './ui/background-gradient'
-// import { CardSpotlight } from './ui/card-spotlight'
 
 function Contact() {
     return (
@@ -9,7 +7,7 @@ function Contact() {
             <BackgroundGradientAnimation>
 
             
-            <div className="absolute z-50 inset-0  flex min-h-screen items-center justify-start">
+            <div className="absolute z-40 inset-0  flex min-h-screen items-center justify-start">
                 <div className="mx-auto w-5/6 sm:w-full max-w-lg">
                     <h1 className="text-4xl font-medium">Contact us</h1>
                     <p className="mt-3">Email at <span className='text-black'>aniketfreelance20@gmail.com</span> or message us here:</p>

@@ -19,6 +19,7 @@ export default {
       },
       fontFamily: {
         ubuntu: ["Ubuntu", "sans-serif"], // Adding the Ubuntu font
+        Ysabeau:["Ysabeau SC"]
       },
       animation: {
         spotlight: "spotlight 2s ease .75s 1 forwards",

@@ -1,6 +1,6 @@
 "use client";
 import React, { useState } from "react";
-import { HoveredLink, Menu, MenuItem } from "./ui/navbar-menu";
+import { Menu, MenuItem } from "./ui/navbar-menu";
 import { cn } from "../lib/utils";
 import Link from "next/link";
 
@@ -11,46 +11,15 @@ function Navbar({ className }: { className?: string }) {
             className={cn("fixed top-10 inset-x-0 max-w-2xl mx-auto z-50", className)}
         >
             <Menu setActive={setActive}>
-                <Link href={'/'}>
+                <Link href={'/'} className="cursor-pointer">
                 <MenuItem setActive={setActive} active={active} item="Home">
                 </MenuItem>
                 </Link>
-                {/* <MenuItem setActive={setActive} active={active} item="Products">
-                    <div className="  text-sm grid grid-cols-2 gap-10 p-4">
-                    <ProductItem
-                    title="Algochurn"
-                    href="https://algochurn.com"
-                    src="https://assets.aceternity.com/demos/algochurn.webp"
-                    description="Prepare for tech interviews like never before."
-                    />
-                    <ProductItem
-                    title="Tailwind Master Kit"
-                    href="https://tailwindmasterkit.com"
-                    src="https://assets.aceternity.com/demos/tailwindmasterkit.webp"
-                    description="Production ready Tailwind css components for your next project"
-                    />
-                    <ProductItem
-                    title="Moonbeam"
-                    href="https://gomoonbeam.com"
-                    src="https://assets.aceternity.com/demos/Screenshot+2024-02-21+at+11.51.31%E2%80%AFPM.png"
-                    description="Never write from scratch again. Go from idea to blog in minutes."
-                    />
-                    <ProductItem
-                    title="Rogue"
-                    href="https://userogue.com"
-                    src="https://assets.aceternity.com/demos/Screenshot+2024-02-21+at+11.47.07%E2%80%AFPM.png"
-                    description="Respond to government RFPs, RFIs and RFQs 10x faster using AI"
-                    />
-                    </div>
-                    </MenuItem> */}
+                <Link href={'#projects'} className="cursor-pointer">
                 <MenuItem setActive={setActive} active={active} item="Projects">
-                    <div className="flex flex-col space-y-4 text-sm">
-                        <HoveredLink href="#projects">Codesware</HoveredLink>
-                        <HoveredLink href="#projects">MystryMessage</HoveredLink>
-                        <HoveredLink href="#projects">Lost&Found</HoveredLink>
-                    </div>
                 </MenuItem>
-                <Link href={'#contact'}>
+                </Link>
+                <Link href={'#contact'} className="cursor-pointer">
                 <MenuItem setActive={setActive} active={active} item="Contact Us">
                 </MenuItem>
                 </Link>

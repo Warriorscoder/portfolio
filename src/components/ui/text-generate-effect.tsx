@@ -2,6 +2,12 @@
 import { useEffect } from "react";
 import { motion, stagger, useAnimate } from "framer-motion";
 import { cn } from "@/lib/utils";
+import { Ysabeau_SC } from 'next/font/google';
+
+const ysabeauSC = Ysabeau_SC({
+  subsets: ['latin'], // You can specify other subsets if needed
+  weight: ['100', '700'], // Specify font weights as per your design
+});
 
 export const TextGenerateEffect = ({
     words,
@@ -51,9 +57,9 @@ export const TextGenerateEffect = ({
     };
 
     return (
-        <div className={cn("font-ubuntu font-thin text-md sm:text-xl", className)}>
+        <div className={cn(`${ysabeauSC.className}`, className)}>
             <div className="mt-4">
-                <div className=" dark:text-white text-black leading-snug tracking-wide">
+                <div className=" dark:text-white text-black  text-lg md:text-2xl leading-snug tracking-wide">
                     {renderWords()}
                 </div>
             </div>
