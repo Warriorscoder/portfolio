@@ -15,11 +15,11 @@ function Navbar({ className }: { className?: string }) {
                 <MenuItem setActive={setActive} active={active} item="Home">
                 </MenuItem>
                 </Link>
-                <Link href={'#projects'} className="cursor-pointer">
+                <Link href={'projects'} className="cursor-pointer">
                 <MenuItem setActive={setActive} active={active} item="Projects">
                 </MenuItem>
                 </Link>
-                <Link href={'#contact'} className="cursor-pointer">
+                <Link href={'/#contact'} className="cursor-pointer">
                 <MenuItem setActive={setActive} active={active} item="Contact Us">
                 </MenuItem>
                 </Link>

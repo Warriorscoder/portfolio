@@ -1,3 +1,5 @@
+"use client"
+
 import React from 'react';
 import { DirectionAwareHover } from './ui/direction-aware-hover';
 import { AuroraBackground } from './ui/aurora-background';
