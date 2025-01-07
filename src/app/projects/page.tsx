@@ -16,7 +16,7 @@ export default function Page() {
       title: "Walmart",
       value: "product",
       content: (
-        <div className="w-full overflow-hidden relative rounded-2xl p-10 text-xl md:text-xl font-Ysabeau text-white bg-gradient-to-br from-purple-700 to-violet-900">
+        <div className="w-full overflow-hidden relative rounded-2xl p-4 md:p-10 text-xl md:text-xl font-Ysabeau text-white bg-gradient-to-br from-purple-700 to-violet-900">
           <Link href={"https://walmart-frontend-three.vercel.app/"} target="_blank"><p className="font-semibold text-xl md:text-4xl animate-bounce">Walmart tab</p> </Link>
           <DummyContent
             content={
@@ -31,7 +31,7 @@ export default function Page() {
       title: "MystryMessage",
       value: "services",
       content: (
-        <div className="w-full overflow-hidden relative rounded-2xl p-10 text-xl md:text-xl font-Ysabeau text-white bg-gradient-to-br from-purple-700 to-violet-900">
+        <div className="w-full overflow-hidden relative rounded-2xl p-4 md:p-10 text-xl md:text-xl font-Ysabeau text-white bg-gradient-to-br from-purple-700 to-violet-900">
          <Link href={"https://mistrymessage-pi.vercel.app/"} target="_blank"> <p className="font-semibold text-xl md:text-4xl animate-bounce">
             MystryMessage tab
           </p>
@@ -49,8 +49,8 @@ export default function Page() {
       title: "Lost&Found",
       value: "playground",
       content: (
-        <div className="w-full overflow-hidden relative rounded-2xl p-10 text-xl md:text-xl font-Ysabeau text-white bg-gradient-to-br from-purple-700 to-violet-900">
-          <Link href={""}> <p className="font-semibold text-xl md:text-4xl animate-bounce">Lost&Found tab</p> </Link>
+        <div className="w-full overflow-hidden relative rounded-2xl p-4 md:p-10 text-xl md:text-xl font-Ysabeau text-white bg-gradient-to-br from-purple-700 to-violet-900">
+          <Link href={""}> <p className="font-semibold text-xl md:text-4xl animate-bounce ">Lost&Found tab</p> </Link>
           <DummyContent
             content={
               "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit. "
@@ -67,9 +67,12 @@ export default function Page() {
       {/* Background Gradient */}
       <div className="absolute inset-0 z-0 bg-grid-white/[0.2] h-screen [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]"></div>
 
-      {/* Content */}
-      <div className="relative h-[20rem] md:h-[40rem] flex flex-col max-w-5xl mx-auto w-full items-start justify-start my-40 z-10">
-        <Tabs tabs={tabs} />
+      {/* Content Wrapper with Scrollable Area */}
+      <div className="relative flex flex-col w-[80vw] max-w-full mx-auto items-start justify-start my-40 z-10">
+        {/* Scrollable Tabs Container */}
+        <div className="h-[80vh] overflow-y-auto w-[100%] scrollbar-hide">
+          <Tabs tabs={tabs} />
+        </div>
       </div>
     </div>
   );
@@ -78,9 +81,9 @@ export default function Page() {
 const DummyContent = ({ content, image }: { content: string; image: string }) => {
   return (
     <div>
-      <div className="grid md:grid-cols-2 relative">
+      <div className="grid md:grid-cols-2 relative m-0">
         <div className="flex justify-center align-middle mt-10 mx-5">
-          <span className={`${ysabeauSC.className}`}>{content}</span>
+          <span className={`${ysabeauSC.className} text-sm md:text-xl lg:text-2xl`}>{content}</span>
         </div>
 
         <div className=" hidden sm:flex justify-center align-middle">
