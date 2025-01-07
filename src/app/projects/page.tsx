@@ -3,6 +3,7 @@
 
 import { Tabs } from "@/components/ui/tabs";
 import { Ysabeau_SC } from "next/font/google";
+import Link from "next/link";
 
 const ysabeauSC = Ysabeau_SC({
   subsets: ["latin"],
@@ -12,16 +13,16 @@ const ysabeauSC = Ysabeau_SC({
 export default function Page() {
   const tabs = [
     {
-      title: "Codeswear.com",
+      title: "Walmart",
       value: "product",
       content: (
         <div className="w-full overflow-hidden relative rounded-2xl p-10 text-xl md:text-xl font-Ysabeau text-white bg-gradient-to-br from-purple-700 to-violet-900">
-          <p className="font-semibold text-xl md:text-4xl">Codeswear.com tab</p>
+          <Link href={"https://walmart-frontend-three.vercel.app/"} target="_blank"><p className="font-semibold text-xl md:text-4xl animate-bounce">Walmart tab</p> </Link>
           <DummyContent
             content={
-              "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam odio ratione maxime debitis..."
+              "Walmart Hackathon: Developed an inventory management system using React.js, Tailwind CSS, GraphQL, Prisma, and JWT. Led frontend development, working closely with backend and data science teams for seamless integration. Implemented secure authentication with JWT and a global context for efficient session management. Designed and integrated GraphQL APIs with Prisma for data handling, ensuring error handling and smooth user experience. Collaborated with the data science team to integrate a machine learning model for predicting product pricing and forecasting stock needs, displaying actionable insights within the frontend."
             }
-            image={"/codeswear.png"}
+            image={"/walmart.png"}
           />
         </div>
       ),
@@ -31,12 +32,13 @@ export default function Page() {
       value: "services",
       content: (
         <div className="w-full overflow-hidden relative rounded-2xl p-10 text-xl md:text-xl font-Ysabeau text-white bg-gradient-to-br from-purple-700 to-violet-900">
-          <p className="font-semibold text-xl md:text-4xl">
+         <Link href={"https://mistrymessage-pi.vercel.app/"} target="_blank"> <p className="font-semibold text-xl md:text-4xl animate-bounce">
             MystryMessage tab
           </p>
+          </Link>
           <DummyContent
             content={
-              "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam odio ratione maxime debitis..."
+              "MystryMessage is an anonymous messaging platform that allows users to send and receive messages with customizable privacy settings. Built with Next.js, TypeScript, Tailwind CSS, MongoDB, JWT, and Gemini AI, it features secure JWT-based authentication with verification via Resend. Debouncing ensures efficient validation of usernames and emails during registration, while Zod handles data validation. Users can share unique URLs to receive anonymous messages and manage their messaging status. A clean interface organizes received messages, and Gemini AI enhances engagement by suggesting questions to simplify message creation."
             }
             image={"/mystrymessage.png"}
           />
@@ -48,12 +50,12 @@ export default function Page() {
       value: "playground",
       content: (
         <div className="w-full overflow-hidden relative rounded-2xl p-10 text-xl md:text-xl font-Ysabeau text-white bg-gradient-to-br from-purple-700 to-violet-900">
-          <p className="font-semibold text-xl md:text-4xl">Lost&Found tab</p>
+          <Link href={""}> <p className="font-semibold text-xl md:text-4xl animate-bounce">Lost&Found tab</p> </Link>
           <DummyContent
             content={
-              "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam odio ratione maxime debitis..."
+              "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit. "
             }
-            image={"/codeswear.png"}
+            image={"/lost&found.png"}
           />
         </div>
       ),

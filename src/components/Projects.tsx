@@ -7,13 +7,13 @@ import { StickyScroll } from './ui/sticky-scroll-reveal';
 function Projects() {
     const content = [
         {
-            title: "Codeswear.com",
+            title: "Walmart",
             description:
-                "An ecomerse platform for shopping codding related colthing.",
+                "Walmart Hackathon: Developed an inventory management system using React.js, Tailwind CSS, GraphQL, Prisma, and JWT. ",
             content: (
                 <div className="h-full w-full bg-[linear-gradient(to_bottom_right,var(--cyan-500),var(--emerald-500))] flex items-center justify-center text-white">
                     <Image
-                        src="/codeswear.png"
+                        src="/walmart.png"
                         width={300}
                         height={300}
                         className="h-full w-full object-cover"
