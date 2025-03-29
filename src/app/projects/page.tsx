@@ -46,16 +46,16 @@ export default function Page() {
       ),
     },
     {
-      title: "Lost&Found",
+      title: "To-do",
       value: "playground",
       content: (
         <div className="w-full overflow-hidden relative rounded-2xl p-4 md:p-10 text-xl md:text-xl font-Ysabeau text-white bg-gradient-to-br from-purple-700 to-violet-900">
-          <Link href={""}> <p className="font-semibold text-xl md:text-4xl animate-bounce ">Lost&Found tab</p> </Link>
+          <Link href={"https://quadb-tech-silk.vercel.app/"}> <p className="font-semibold text-xl md:text-4xl animate-bounce ">To-do List</p> </Link>
           <DummyContent
             content={
-              "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit. "
+              "This To-Do List project is a sleek and efficient task management application built with Next.js and TypeScript, ensuring high performance and type safety. It operates entirely on the client side, with no backend, leveraging Redux Toolkit for state management. To provide persistence across sessions, it utilizes Redux Persist, ensuring tasks remain saved even after page reloads. A standout feature of this application is the Ask AI functionality, powered by the Gemini API, which intelligently suggests 5-6 actionable steps to help users achieve their tasks more efficiently. This enhances productivity by breaking down goals into manageable steps. The application follows a clean and minimalistic UI, offering a seamless user experience while maintaining state consistency and persistence effortlessly."
             }
-            image={"/lost&found.png"}
+            image={"/To-do.png"}
           />
         </div>
       ),
