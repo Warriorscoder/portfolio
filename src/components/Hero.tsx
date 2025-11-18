@@ -1,7 +1,7 @@
 "use client"
 
 import React from 'react';
-import { DirectionAwareHover } from './ui/direction-aware-hover';
+// import { DirectionAwareHover } from './ui/direction-aware-hover';
 import { AuroraBackground } from './ui/aurora-background';
 import { TextGenerateEffect } from './ui/text-generate-effect';
 
@@ -10,7 +10,7 @@ function Hero() {
 
     return (
         <AuroraBackground>
-        <div className='md:grid md:grid-cols-2'>
+        <div className=''>
 
             <div className='flex m-auto justify-center align-middle p-3'>
             
@@ -20,12 +20,12 @@ function Hero() {
 
             </div>
 
-            <div className='hidden sm:flex m-auto justify-center align-middle p-3'>
+            {/* <div className='hidden sm:flex m-auto justify-center align-middle p-3'>
                 <DirectionAwareHover imageUrl={"/temp.jpeg"}>
                 <p className="font-bold text-xl">Aniket</p>
                 <p className="font-normal text-md">Bharane</p>
                 </DirectionAwareHover>
-            </div>
+            </div> */}
         </div> 
         </AuroraBackground>
     );
