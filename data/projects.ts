@@ -54,6 +54,42 @@ export const projectDetails: ProjectDetails[] = [
       "Data Reliability: Implemented Zod validation and auto-healing parsing to guarantee strict typing.",
     ],
   },
+  {
+  id: 2,
+  title: "AutoDoc: AI-Powered GitHub Documentation Generator",
+  date: "Dec 2025",
+  link: "https://autodoc-eo86mz019-warriors-projects-7af56d98.vercel.app/",
+  github: "https://github.com/Warriorscoder/autodoc",
+  techStack: [
+    "Next.js",
+    "React",
+    "TypeScript",
+    "LangChain",
+    "Groq (Llama-3.1)",
+    "Zod",
+    "GitHub API (Octokit)",
+    "Upstash Redis",
+    "Tailwind CSS",
+    "shadcn/ui"
+  ],
+
+  overview:
+    "An AI-driven developer tool that automatically generates structured, validated documentation from a GitHub repository URL by analyzing the codebase, architecture, and API surface—without requiring write access to the repository.",
+
+  workflow: [
+    "Repository Ingestion: Fetches repository metadata, commit hash, and file structure using the GitHub API.",
+    "Static Analysis Stage: Analyzes file paths and code roles to build a high-level semantic understanding of the project.",
+    "AI Orchestration: Uses LangChain with a schema-driven prompt to generate structured documentation via Groq-hosted LLMs.",
+    "Validation & Delivery: Validates output with Zod and returns frontend-ready JSON for rendering or README generation."
+  ],
+
+  optimizations: [
+    "Schema-Enforced Generation: Zod-backed structured parsing eliminates hallucinations and guarantees deterministic output.",
+    "Cache-Aware Design: Optional Redis caching keyed by commit hash avoids redundant analysis and AI calls.",
+    "Permission-Free UX: Designed a trust-first workflow by avoiding GitHub write scopes and automated commits."
+  ],
+}
+
 ]
 
 
@@ -70,4 +106,17 @@ export const projects: Project[] = [
     videoFull:
       "https://res.cloudinary.com/dyg15ikh2/video/upload/q_auto,f_auto/small-scrapper-video_jtdfyh.mp4",
   },
+  {
+  id: 2,
+  title: "AutoDoc",
+  description:
+    "AI-powered GitHub documentation generator that analyzes a repository’s structure, APIs, and architecture to produce clean, structured, and validated documentation automatically—removing the need for manual README writing.",
+
+  videoPreview:
+    "https://res.cloudinary.com/dyg15ikh2/video/upload/q_auto:low,f_auto,so_0,eo_8,w_1280/autodoc_x9qhrz.mp4",
+
+  videoFull:
+    "https://res.cloudinary.com/dyg15ikh2/video/upload/q_auto,f_auto/autodoc_x9qhrz.mp4",
+}
+
 ];

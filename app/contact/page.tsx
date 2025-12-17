@@ -7,7 +7,7 @@ export default function Contact() {
   return (
     <section className="container-wide mx-auto px-4">
         {/* Header */}
-        <div className="max-w-3xl mb-16">
+        <div className="mb-16">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}

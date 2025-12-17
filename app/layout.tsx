@@ -1,24 +1,27 @@
-import Sidebar from "@/components/Sidebar"
-import "./globals.css"
+import Sidebar from "@/components/Sidebar";
+import "./globals.css";
 
 export const metadata = {
   title: "Portfolio",
-  description: "Designer portfolio"
-}
+  description: "Designer portfolio",
+};
 
 export default function RootLayout({
-  children
+  children,
 }: {
-  children: React.ReactNode
+  children: React.ReactNode;
 }) {
   return (
     <html lang="en">
       <body className="flex min-h-screen">
-        <aside className="w-64 p-6 border-r hidden md:block">
+        <div className="relative flex min-h-screen">
+          {/* Sidebar handles its own responsiveness */}
           <Sidebar />
-        </aside>
-        <main className="flex-1 p-8">{children}</main>
+
+          {/* Main content */}
+          <main className="flex-1 p-6">{children}</main>
+        </div>
       </body>
     </html>
-  )
+  );
 }
