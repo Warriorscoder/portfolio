@@ -13,7 +13,10 @@ export default function HighlightCard({ project }: { project: Project }) {
   const details =
     projectDetails.find((item) => item.id === project.id) ?? null
 
+  const isVideo = project.videoPreview?.endsWith(".mp4") || project.videoPreview?.includes("/video/upload/");
+
   const handleMouseEnter = () => {
+    if (!isVideo) return
     const video = videoRef.current
     if (!video) return
     video.currentTime = 0
@@ -22,6 +25,7 @@ export default function HighlightCard({ project }: { project: Project }) {
   }
 
   const handleMouseLeave = () => {
+    if (!isVideo) return
     const video = videoRef.current
     if (!video) return
     video.pause()
@@ -38,14 +42,22 @@ export default function HighlightCard({ project }: { project: Project }) {
           onClick={() => setOpen(true)}
         >
           <div className="relative h-80 overflow-hidden rounded media-grayscale">
-            <video
-              ref={videoRef}
-              src={project.videoPreview}
-              muted
-              playsInline
-              preload="metadata"
-              className="absolute inset-0 w-full h-full object-cover"
-            />
+            {isVideo ? (
+              <video
+                ref={videoRef}
+                src={project.videoPreview}
+                muted
+                playsInline
+                preload="metadata"
+                className="absolute inset-0 w-full h-full object-cover"
+              />
+            ) : (
+              <img
+                src={project.videoPreview}
+                alt={project.title}
+                className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 hover:scale-105"
+              />
+            )}
           </div>
 
           <h3 className="mt-4 font-semibold">{project.title}</h3>

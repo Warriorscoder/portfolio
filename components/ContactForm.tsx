@@ -45,39 +45,39 @@ export default function ContactForm() {
   return (
     <form
       onSubmit={handleSubmit}
-      className="max-w-4xl space-y-12"
+      className="max-w-xl w-full bg-white border border-[#EAEAEA] rounded-2xl p-6 sm:p-8 shadow-[0_1px_3px_rgba(0,0,0,0.01),0_2px_8px_rgba(0,0,0,0.015)] space-y-8"
     >
       {/* Name & Email */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
         <div>
-          <label className="block text-sm text-gray-500 mb-2">
-            Name*
+          <label className="block text-[11px] font-mono uppercase tracking-wider text-[#787774] mb-2 font-bold">
+            Name *
           </label>
           <input
             name="name"
             required
-            placeholder="Hello…"
+            placeholder="Introduce yourself..."
             className="
-              w-full bg-transparent border-b border-gray-300
-              py-3 text-gray-900 placeholder-gray-400
-              focus:outline-none focus:border-gray-900
+              w-full bg-transparent border-b border-[#EAEAEA]
+              py-2.5 text-base text-[#2F3437] placeholder-[#787774]/40
+              focus:outline-none focus:border-[#111111] transition-colors
             "
           />
         </div>
 
         <div>
-          <label className="block text-sm text-gray-500 mb-2">
-            Email*
+          <label className="block text-[11px] font-mono uppercase tracking-wider text-[#787774] mb-2 font-bold">
+            Email Address *
           </label>
           <input
             name="email"
             type="email"
             required
-            placeholder="Where can I reply?"
+            placeholder="where_can_i@reply.com"
             className="
-              w-full bg-transparent border-b border-gray-300
-              py-3 text-gray-900 placeholder-gray-400
-              focus:outline-none focus:border-gray-900
+              w-full bg-transparent border-b border-[#EAEAEA]
+              py-2.5 text-base text-[#2F3437] placeholder-[#787774]/40
+              focus:outline-none focus:border-[#111111] transition-colors
             "
           />
         </div>
@@ -85,46 +85,46 @@ export default function ContactForm() {
 
       {/* Message */}
       <div>
-        <label className="block text-sm text-gray-500 mb-2">
-          Message*
+        <label className="block text-[11px] font-mono uppercase tracking-wider text-[#787774] mb-2 font-bold">
+          Message *
         </label>
         <textarea
           name="message"
           rows={4}
           required
-          placeholder="Tell me a bit about your idea or collaboration…"
+          placeholder="Tell me about your project, idea, or B2B scalability goals..."
           className="
-            w-full bg-transparent border-b border-gray-300
-            py-3 text-gray-900 placeholder-gray-400 resize-none
-            focus:outline-none focus:border-gray-900
+            w-full bg-transparent border-b border-[#EAEAEA]
+            py-2.5 text-base text-[#2F3437] placeholder-[#787774]/40 resize-none
+            focus:outline-none focus:border-[#111111] transition-colors
           "
         />
       </div>
 
       {/* Submit */}
-      <div className="flex items-center gap-6">
+      <div className="flex flex-col sm:flex-row sm:items-center gap-4 pt-2">
         <button
           type="submit"
           disabled={loading}
           className="
-            rounded-full border border-gray-900
-            px-8 py-3 text-sm font-medium
-            transition hover:bg-gray-900 hover:text-white
-            disabled:opacity-50
+            rounded-lg border border-[#EAEAEA] bg-[#111111]
+            px-6 py-2.5 text-xs font-mono font-bold text-white
+            transition hover:bg-[#2F3437] active:scale-[0.98] active:translate-y-[0.5px]
+            disabled:opacity-50 cursor-pointer shadow-[0_2px_8px_rgba(0,0,0,0.05)]
           "
         >
-          {loading ? "Sending…" : "Send message"}
+          {loading ? "SENDING..." : "SEND MESSAGE"}
         </button>
 
         {success && (
-          <p className="text-sm text-gray-500">
-            Message sent — I’ll get back to you soon.
+          <p className="text-xs font-mono text-emerald-600 font-semibold animate-pulse">
+            TRANSMISSION SUCCESSFUL — I’LL RESPOND SOON.
           </p>
         )}
 
         {error && (
-          <p className="text-sm text-red-500">
-            {error}
+          <p className="text-xs font-mono text-red-600 font-semibold">
+            {error.toUpperCase()}
           </p>
         )}
       </div>

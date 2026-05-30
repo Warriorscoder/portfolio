@@ -1,9 +1,9 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { HorizontalTimeline, CapabilityMatrix } from "@/components/PortfolioComponents"
+import { FeaturedShopifyCaseStudy, SystemsIBuild } from "@/components/PortfolioComponents"
 
-export default function ExperiencePage() {
+export default function ProjectsPage() {
   return (
     <section className="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
       {/* Page Title */}
@@ -14,7 +14,7 @@ export default function ExperiencePage() {
           transition={{ duration: 0.4 }}
           className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-[#EAEAEA] bg-white text-xs font-mono tracking-wider text-[#787774] uppercase shadow-[0_1px_2px_rgba(0,0,0,0.02)]"
         >
-          <span>Chronology Index</span>
+          <span>Product Index</span>
         </motion.div>
 
         <motion.h1
@@ -23,7 +23,7 @@ export default function ExperiencePage() {
           transition={{ duration: 0.6 }}
           className="text-4xl md:text-5xl font-extrabold tracking-tight text-[#111111]"
         >
-          Professional History
+          Engineered Systems
         </motion.h1>
 
         <motion.p
@@ -32,21 +32,21 @@ export default function ExperiencePage() {
           transition={{ duration: 0.6, delay: 0.15 }}
           className="text-[#2F3437] max-w-xl text-sm font-light leading-relaxed"
         >
-          Timeline of engineering internships, distributed backend orchestration, and standard frontend architecture.
+          A highly specialized index of production-ready dashboard platforms, automated scraping pipelines, and distributed data systems.
         </motion.p>
       </div>
 
-      {/* Experience Timeline */}
+      {/* Featured Shopify Case Study centerpiece */}
       <motion.div
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, delay: 0.25 }}
         className="pt-8 border-t border-[#EAEAEA]"
       >
-        <HorizontalTimeline />
+        <FeaturedShopifyCaseStudy />
       </motion.div>
 
-      {/* Expertise Block */}
+      {/* Systems Categories Grid */}
       <motion.div
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
@@ -54,11 +54,11 @@ export default function ExperiencePage() {
         className="space-y-8 pt-12 border-t border-[#EAEAEA]"
       >
         <div>
-          <span className="text-[10px] font-mono uppercase tracking-widest text-indigo-600 font-bold">Capabilities Mapping</span>
-          <h2 className="text-2xl font-extrabold text-[#111111] tracking-tight mt-1">Enterprise Capability Matrix</h2>
+          <span className="text-[10px] font-mono uppercase tracking-widest text-indigo-600 font-bold">Scope of Architecture</span>
+          <h2 className="text-2xl font-extrabold text-[#111111] tracking-tight mt-1">Systems Index</h2>
         </div>
 
-        <CapabilityMatrix />
+        <SystemsIBuild />
       </motion.div>
     </section>
   )
