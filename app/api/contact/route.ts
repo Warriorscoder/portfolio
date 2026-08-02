@@ -1,5 +1,7 @@
-import nodemailer from "nodemailer"
+import { Resend } from "resend"
 import { NextResponse } from "next/server"
+
+const resend = new Resend(process.env.NEXT_PUBLIC_URL_EMAIL_API_KEY)
 
 export async function POST(req: Request) {
   try {
@@ -12,17 +14,11 @@ export async function POST(req: Request) {
       )
     }
 
-    const transporter = nodemailer.createTransport({
-      service: "gmail",
-      auth: {
-        user: process.env.NEXT_PUBLIC_URL_EMAIL_USER,
-        pass: process.env.NEXT_PUBLIC_URL_EMAIL_PASS,
-      },
-    })
+    const recipient = process.env.NEXT_PUBLIC_URL_EMAIL_USER || "aniketbharane2004@gmail.com"
 
-    await transporter.sendMail({
-      from: `"Portfolio Contact" <${process.env.NEXT_PUBLIC_URL_EMAIL_USER}>`,
-      to: process.env.NEXT_PUBLIC_URL_EMAIL_USER,
+    const { data, error } = await resend.emails.send({
+      from: "Portfolio Contact <onboarding@resend.dev>",
+      to: [recipient],
       replyTo: email,
       subject: `New portfolio contact from ${name}`,
       html: `
@@ -36,7 +32,15 @@ export async function POST(req: Request) {
       `,
     })
 
-    return NextResponse.json({ success: true })
+    if (error) {
+      console.error("Resend error:", error)
+      return NextResponse.json(
+        { error: error.message || "Failed to send message" },
+        { status: 400 }
+      )
+    }
+
+    return NextResponse.json({ success: true, data })
   } catch (error) {
     console.error("Contact error:", error)
     return NextResponse.json(

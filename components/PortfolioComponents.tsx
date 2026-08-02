@@ -11,6 +11,7 @@ import {
   FiLayout, FiLock, FiCheckCircle, FiSearch, FiSliders, FiFilter,
   FiExternalLink, FiGithub
 } from "react-icons/fi"
+import Link from "next/link"
 
 // ----------------------------------------------------
 // 1. HERO INTERACTIVE FLOW
@@ -388,7 +389,9 @@ export function FeaturedShopifyCaseStudy() {
     if (leadFilter === "high_potential") return lead.status === "HIGH_POTENTIAL"
     return true
   })
-
+  const handleclick = () => {
+    window.open("https://glaro.org", "_blank")
+  }
   return (
     <div className="space-y-12 w-full">
       {/* Narrative Section */}
@@ -396,7 +399,8 @@ export function FeaturedShopifyCaseStudy() {
         <div className="lg:col-span-2 space-y-6">
           <div>
             <span className="text-xs font-mono uppercase tracking-widest text-indigo-600 font-bold">Featured Production Architecture</span>
-            <h3 className="text-3xl font-extrabold text-[#111111] tracking-tight mt-1">Shopify Lead Intelligence Platform</h3>
+            <h3 className="text-3xl font-extrabold text-[#111111] tracking-tight mt-1 cursor-pointer w-fit" onClick={handleclick}>Glaro</h3> 
+            <h4>Shopify Lead Intelligence Platform</h4>
             <p className="text-sm text-[#2F3437] mt-2 font-light">
               A highly scalable B2B intelligence hub that crawls public ecommerce sites, derives signals (e.g. absent email tracking, review deficits), and aggregates highly targeted leads.
             </p>
